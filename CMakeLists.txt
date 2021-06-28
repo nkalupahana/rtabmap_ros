@@ -180,6 +180,7 @@ SET(Libraries
    image_transport
    tf2
    tf2_ros
+   tf2_eigen
    laser_geometry
    message_filters
    class_loader
