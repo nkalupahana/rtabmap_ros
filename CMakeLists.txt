@@ -273,6 +273,10 @@ ament_target_dependencies(rtabmap_sync ${Libraries})
 ament_target_dependencies(rtabmap_plugins ${Libraries})
 
 target_link_libraries(rtabmap_ros ${RTABMap_LIBRARIES})
+IF(APPLE)
+    target_link_libraries(rtabmap_ros ${PCL_LBRARIES})
+ENDIF()
+
 target_link_libraries(rtabmap_sync rtabmap_ros ${RTABMap_LIBRARIES})
 target_link_libraries(rtabmap_plugins rtabmap_ros ${RTABMap_LIBRARIES})
 
